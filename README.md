@@ -5,5 +5,6 @@
 - Java >= 17
 
 ## How to run:
+- ```./gradlew bootRun```
 
-## How to open:
+## How to test:
