@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "cf66a86f-7814-4fb4-9303-b6ed6ac57903",
+		"name": "Converter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CheckIfRunning",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SendListOfTimes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"timeList\": [ \r\n        \"[PM] 0:00.000\", \r\n        \"[H1] 0:15.025\", \r\n        \"[H1] 3:07.513\",\r\n        \"[H1] 13:07.513\",\r\n        \"[H1] 45:00.001\", \r\n        \"[H1] 46:15.752\", \r\n        \"[HT] 45:00.000\",\r\n        \"[HT] 45:01.000\", \r\n        \"[H2] 45:00.500\", \r\n        \"[H2] 90:00.908\", \r\n        \"[FT] 90:00.000\",\r\n        \"[FT] 90:00.001\",\r\n        \"[H3] 90:00.000\",\r\n        \"[PM] -10:00.000\",\r\n        \"90:00\",\r\n        \"FOO\"\r\n        ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SendOneTime",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"time\": \"[H1] 0:15.025\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
