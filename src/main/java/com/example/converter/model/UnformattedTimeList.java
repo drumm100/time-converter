@@ -1,10 +1,11 @@
 package com.example.converter.model;
 
+import lombok.Data;
+
+import java.util.LinkedList;
 import java.util.List;
 
+@Data
 public class UnformattedTimeList {
-    List<String> timeList;
-    public List<String> getTimeList() {
-        return timeList;
-    }
+    private List<String> timeList = new LinkedList<>();
 }

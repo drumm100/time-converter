@@ -1,8 +1,9 @@
 package com.example.converter.model;
 
+import lombok.Data;
+import lombok.Getter;
+
+@Data
 public class UnformattedTime {
-    String time;
-    public String getTime() {
-        return time;
-    }
+    private String time;
 }
